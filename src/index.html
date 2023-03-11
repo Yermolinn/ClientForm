@@ -1,14 +1,661 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
-  </body>
+<!doctype html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="google-site-verification" content="cfikGKetdZQme7wqLOXuoG1qHE-ci3hZDgz0wzVjP58">
+        <meta property="og:title" content="UAMF - Анкета">
+        <meta property="og:description" content="Анкета для участi у программах">
+        <meta property="og:url" content="https://uamf.com.ua">
+        <meta property="og:images" content="/images/logo.png">
+        <meta property="og:images:secure_url" content="/images/logo.png">
+        <meta property="og:images:alt" content="UAMF">
+        <meta property="og:images:type" content="images/png">
+        <title>UAMF - Анкета</title>
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href="./sass/index.scss" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="logo-wrapper pt-4 pb-4">
+                    <div class="logo">
+                        <img src="./images/logo.svg">
+                    </div>
+                    <h2 class="title pl-3">Анкета для участi у программах</h2>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="form-wrapper container d-flex justify-content-center mt-5 mb-5">
+                <form class="needs-validation" novalidate="">
+
+                    <h3 class="titles">💳 Особиста інформація</h3>
+                    <div class="section" >
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">Прізвище</label>
+                            <input type="text" class="form-control" id="surname" name="surname" placeholder="Прізвище" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ім'я</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Ім'я" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="birthday" class="form-label">Дата народження</label>
+                            <input type="date" class="form-control" id="birthday" name="birthday" placeholder="20.01.1993" required="">
+                            <div class="invalid-feedback">
+                                Введіть дату народження
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Номер телефону</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required="" value="+380" minlength="9"
+                                maxlength="13">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" value="" minlength="7">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="passport" class="form-label">Паспортні дані</label>
+                            <input type="text" class="form-control" id="passport" name="passport" placeholder="Серія, номер, ким виданий"
+                                required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="mb-3">
+                            <label for="registration" class="form-label">Місце реєстрації</label>
+                            <input type="text" class="form-control" id="registration" name="registration" placeholder="Місто, адреса"
+                                required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="residence" class="form-label">Місце проживання</label>
+                            <input type="text" class="form-control" id="residence" name="residence" placeholder="Країна, місто" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="current-location" class="form-label">Адреса поточного місцезнаходження</label>
+                            <input type="text" class="form-control" id="current-location" name="current-location" placeholder="Країна, місто" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <h3 class="titles">🎓 Освіта</h3>
+                    <div class="section">
+                        <div class="mb-3 js-student">
+                            <label class="form-label">Студент</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="who" id="no-student" value="0" checked="" required="">
+                                <label class="form-check-label" for="no-student">
+                                    Ні
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="who" value="1" id="student" required="">
+                                <label class="form-check-label" for="student">
+                                    Так
+                                </label>
+                            </div>
+
+                            </div>
+                            <div class="mb-3 list-student" style="display: none;">
+                                <label for="university" class="form-label">Навчальний заклад</label>
+                                <input type="text" class="form-control" id="university" name="university" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+
+                            <div class="mb-3">
+                                <label for="faculty" class="form-label">Факультет</label>
+                                <input type="text" class="form-control" id="faculty" name="faculty" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="form-education" class="form-label">Форма навчання</label>
+                                <input type="text" class="form-control" id="form-education" name="form-education" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="speciality" class="form-label">Спеціальність</label>
+                                <input type="text" class="form-control" id="speciality" name="speciality" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="date-entry" class="form-label">Дата вступу</label>
+                                <input type="date" class="form-control" id="date-entry" name="date-entry" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="graduation-date" class="form-label">Дата випуску</label>
+                                <input type="date" class="form-control" id="graduation-date" name="graduation-date" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                        <div class="mb-3">
+                            <label for="education" class="form-label">Степінь освіти</label>
+                            <input type="text" class="form-control" id="education" name="education" placeholder="Вища, бакалавр" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <h3 class="titles">🗣 Знання мов</h3>
+                    <div class="section" >
+                        <div class="mb-3 js-english-language">
+                            <label class="form-label">Англійська</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="english" id="no-english" value="0" checked="" required="">
+                                <label class="form-check-label" for="no-english">
+                                    Не володію
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="english" id="english" value="1" required="">
+                                <label class="form-check-label" for="english">
+                                    Володію
+                                </label>
+                            </div>
+                            <div class="mb-3 english-level" style="display: none;">
+                                <label for="eng-level" class="form-label">Володію:</label>
+                                <label>Базова <input type="checkbox" class="" id="eng-level" name="eng-level" placeholder="" required=""></label>
+                                <label>Розмовна <input type="checkbox" class="" id="eng-level" name="eng-level" placeholder="" required=""></label>
+                                <label>Вільно <input type="checkbox" class="" id="eng-level" name="eng-level" placeholder="" required=""></label>
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="languages" class="form-label">Інші мови</label>
+                            <input type="text" class="form-control" id="languages" name="languages" placeholder="Німецька - базово, польська - розмовна ..." required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <h3 class="titles">🚙 Посвідчення водія та наявність категорій</h3>
+
+
+                    <div class="mb-3 js-drive-licence">
+                        <label class="form-label">Посвідчення водія</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="licence" id="no-drive" value="0" checked="" required="">
+                            <label class="form-check-label" for="no-drive">
+                                Ні
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="licence" id="drive" value="1" required="">
+                            <label class="form-check-label" for="drive">
+                                Так
+                            </label>
+                        </div>
+                        <div class="mb-3 drive-category" style="display: none;">
+                            <label for="categories" class="form-label">Категорії: </label>
+                            <label>A <input type="checkbox" class="" id="categories" name="categories" placeholder="" required=""></label>
+                            <label>B <input type="checkbox" class="" id="categories" name="categories" placeholder="" required=""></label>
+                            <label>C <input type="checkbox" class="" id="categories" name="categories" placeholder="" required=""></label>
+                            <label>D <input type="checkbox" class="" id="categories" name="categories" placeholder="" required=""></label>
+                            <label>E <input type="checkbox" class="" id="categories" name="categories" placeholder="" required=""></label>
+                            <label>Трактор <input type="checkbox" class="" id="categories" name="categories" placeholder=""
+                                    required=""></label>
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                            <div class="mb-3">
+                                <label for="drive-exp" class="form-label">Досвід керування</label>
+                                <input type="text" class="form-control" id="drive-exp" name="drive-exp" placeholder="B категорія - 5 років, трактор - 2 роки" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="technique" class="form-label">Досвід роботи з технікою</label>
+                            <input type="text" class="form-control" id="technique" name="technique"
+                                placeholder="Навантажувач, рокла електрична, комбайн, причіпне та навісне обладнання...">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="skills" class="form-label">Інші навички</label>
+                            <input type="text" class="form-control" id="skills" name="skills"
+                                placeholder="Зварювання, будівництво, зварювання, ремонт техніки, валка лісу">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+                    <h3 class="titles">🏋️ Додаткова інформація</h3>
+                    <div class="mb-3">
+                        <label for="height" class="form-label">Зріст, см</label>
+                        <input type="number" class="form-control" id="height" name="height" placeholder="180 см" required="" min="100"
+                            max="220">
+                        <div class="invalid-feedback">
+                            Поле не може бути пустим
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="mb-3">
+                        <label for="weight" class="form-label">Вага, кг</label>
+                        <input type="number" class="form-control" id="weight" name="weight" placeholder="72 кг" required="" min="35"
+                            max="150">
+                        <div class="invalid-feedback">
+                            Поле не може бути пустим
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="mb-3">
+                        <label for="shoe-size" class="form-label">Розмір взуття</label>
+                        <input type="number" class="form-control" id="shoe-size" name="shoe-size" placeholder="41" required="" min="33"
+                            max="50">
+                        <div class="invalid-feedback">
+                            Поле не може бути пустим
+                        </div>
+                    </div>
+
+
+
+                    <h3 class="titles">💼 Досвід роботи за кордоном</h3>
+                    <small><p class="second-text">У випадку, якщо ви працювали більше, ніж на двох місцях роботи, будь ласка, додай те до анкети своє резюме</p></small>
+                    <div>
+                        
+                        <div class="mb-3">
+                            <label for="employer" class="form-label">Назва організації / Контактна особа</label>
+                            <input type="text" class="form-control" id="employer" name="employer" placeholder="Назва організації / Контактна особа" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="employer-phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="employer-phone" name="employer-phone" placeholder="+48" required="" minlength="9">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="contry" class="form-label">Країна / Адреса</label>
+                            <input type="text" class="form-control" id="contry" name="contry" placeholder="Країна / Адреса" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="start-prew--work" class="form-label">Початок роботи</label>
+                            <input type="date" class="form-control" id="start-prew--work" name="start-prew--work" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="finish-prew-work" class="form-label">Кінець роботи</label>
+                            <input type="date" class="form-control" id="finish-prew-work" name="finish-prew--work" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="type-job" class="form-label">Тип роботи</label>
+                            <input type="text" class="form-control" id="type-job" name="type-job" placeholder="Пряні трави, збір ягід, вирощування квітів" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        <label class="form-label">Паперові рекомендації</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="recomend" id="no-recomendation" value="0" checked="" required="">
+                            <label class="form-check-label" for="no-recomendation">
+                                Не маю
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="recomend" value="1" id="recomendation" required="">
+                            <label class="form-check-label" for="recomendation">
+                                Маю
+                            </label>
+                        </div>
+
+
+                        
+                    </div>
+
+
+
+                    <h3 class="titles">📌 Додаткова інформація щодо перетину кордонів</h3>
+                    <div class="section" >
+                        <div class="mb-3">
+                            <label for="biometric-passport" class="form-label">Наявність біометричного паспорта</label>
+                            <select class="form-control" id="biometric-passport" name="biometric-passport" required="">
+                                <option value="not-married">Не маю</option>
+                                <option value="married">Маю</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+
+
+
+                        <div class="mb-3 js-shelter">
+                            <label for="" class="form-label">Наявність прихистку за кордоном</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shelter" id="no-shelter" value="0" checked="" required="">
+                                <label class="form-check-label" for="no-shelter">
+                                    Не маю
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shelter" value="1" id="shelter" required="">
+                                <label class="form-check-label" for="shelter">
+                                    Маю
+                                </label>
+                            </div>
+                            <div class="mb-3 country-shelter" style="display: none;">
+                                <label for="country-shelter" class="form-label" >Країна</label>
+                                <input type="text" class="form-control" id="country-shelter" name="country-shelter" placeholder="Польща" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cross-border" class="form-label">Чи маєте право перетину кордону згідно чинного законодавства</label>
+                            <select class="form-control" id="cross-border" name="cross-border" required="">
+                                <option value="married">Маю</option>
+                                <option value="not-married">Не маю</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+                        
+                        <div class="mb-3">
+                            <label for="cross-border-doc" class="form-label">Документ, що підтверджує право перетину кордону</label>
+                            <input type="text" class="form-control" id="cross-border-doc" name="cross-border-doc" placeholder="Виписка з воєнкомату" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <h3 class="titles">🪄 Побажання щодо роботи</h3>
+                    <div>
+                        <div class="mb-3">
+                            <label for="start-work" class="form-label">Початок роботи якнайшвидше з</label>
+                            <input type="text" class="form-control" id="start-work" name="start-work"
+                                placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="" class="form-label">Бажаний термін роботи</label>
+                            <input type="text" class="form-control" id="" name=""
+                                placeholder="(місяців)" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3 js-together">
+                            <label class="form-label">Плануєте їхати самостійно</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="together" id="alone" value="0" checked required>
+                                <label class="form-check-label" for="alone">
+                                    Самостійно
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="together" value="1" id="together" required>
+                                <label class="form-check-label" for="together">
+                                    Разом
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3 info-together" style="display: none;">
+                            <label for="sec-person" class="form-label">Вкажіть ПІБ з ким плануєте їхати</label>
+                            <textarea class="textarea-control" id="sec-person" rows="3" name="sec-person"
+                                placeholder="Іваненко Іван Іванович, Іваненко Анастасія Михайлівна"></textarea>
+                            <div class="mb-3">
+                                <label for="sec-person-phone" class="form-label">Контактні данні особи, з ким плануєте їхати</label>
+                                <input type="text" class="form-control" id="sec-person-phone" name="sec-person-phone" placeholder="E-mail, номер телефону" required="">
+                                <div class="invalid-feedback">
+                                    Поле не може бути пустим
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+
+
+
+                        
+                    <h3 class="titles">✒️ Коментар</h3>
+                    <div class="mb-3">
+                        <label for="comment" class="form-label"></label>
+                        <textarea class="textarea-control" id="comment" rows="8" name="comment"></textarea>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <!-- <div class="mb-3">
+                            <label for="chronic-diseases" class="form-label">Хронічні захворювання</label>
+                            <input type="text" class="form-control" id="chronic-diseases" name="chronic-diseases" placeholder="Алергії, астма, гіпертонія" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="travel-restrictions" class="form-label">Обмеження на виїзд</label>
+                            <input type="text" class="form-control" id="travel-restrictions" name="travel-restrictions" placeholder="Cудимість" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+
+
+                        <div class="mb-3">
+                            <label for="hobby" class="form-label">Захоплення</label>
+                            <input type="text" class="form-control" id="hobby" name="hobby" placeholder="Подорожування, спорт, музика" required="">
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="mb-3">
+                            <label for="type-contact" class="form-label">Тип контакту</label>
+                            <select class="form-control" id="type-contact" name="type-contact" placeholder="Тип контакту" required="">
+                                <option value="employer">Роботодавець</option>
+                                <option value="employee">Робітник</option>
+                                <option value="tax-refund">Повернення одатків</option>
+                                <option value="university">ВУЗ</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Поле не може бути пустим
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+                   
+                    <!-- <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="placeForLive"
+                                name="place_for_live" value="1">
+                            <label class="form-check-label" for="placeForLive">Чи потрібно місце проживання ?</label>
+                        </div>
+                    </div> -->
+
+                    
+                    <!-- <div class="mb-3 comm">
+                        <label for="comment" class="form-label">Коментар</label>
+                        <textarea class="form-textarea" id="comment" rows="3" name="comment" placeholder="(дайте нам знати чи є люди з обмеженими фізичними можливостями, чи просто якісь особливі потреби)"></textarea>
+                    </div> -->
+
+
+
+
+
+                    
+                    <div class="justify-content-center" style="display: none;" id="sendingForm">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Відправлення...</span>
+                        </div>
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="noSendForm" style="display: none;">
+                        Щось пішло не так. Анкету не відправлено. Ви можете спробувати заповнити її знову, але в іншому
+                        браузері. Або напишіть нам на електрону адресу:
+                        <a href="mailto:help@uamf.com.ua"><strong>help@uamf.com.ua</strong></a>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <button class="btn btn-primary w-100" type="submit">Відправити</button>
+                    </div>
+                </form>
+            </div>
+
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalLabel">Дякуємо за анкету</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex align-items-center pt-5 pb-5">
+                            <img src="./images/heart-ukraine-flag.jpg" width="64" height="64">
+                            <span>В найближчі часи з Вами зв'яжеться менеджер. Все буде добре. Слава
+                                Україні!</span>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Зачинити</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <!--<footer class="mb-5">-->
+        <!--    <div class="container">-->
+        <!--        <h3 class="text-center">За підтримки</h3>-->
+        <!--        <div class="partner mt-4">-->
+        <!--            <a href="https://zt-rada.gov.ua/" class="partner-item">-->
+        <!--                <img src="./image/partner-zh.png" width="61" height="56">-->
+        <!--                <span class="title">Житомирська<br> міська<br> рада</span>-->
+        <!--            </a>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</footer>-->
+
+
+
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="./index.js" type="module"></script>
+
+    </body>
 </html>
