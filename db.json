@@ -1,3 +1,43 @@
 {
-    "client": []
+  "clients": [
+    {
+      "name": "",
+      "surname": "",
+      "phone": "+380",
+      "email": "",
+      "deal_cf_b322a776f61257a19915118c7269533e637d0e26": "",
+      "deal_cf_aee886908bc4a731e6bbcd60ae56ded02f8fc584": "",
+      "deal_cf_f0a4df0e430ed3fba8cb83a641e9d9ca6c27c4c7": "0",
+      "deal_cf_35c2cb99905d80bc2b762c6d1c94af914cab28ce": "",
+      "deal_cf_ea976f14a52c0b3887275e31d26f20d43aa60e6a": "",
+      "deal_cf_52776727e9acc4774092471866457a39cea58481": "",
+      "contact_cf_928bc2731cc537869995ff7b92a28c154d3facb7": "",
+      "contact_cf_9336cc571ed8dc9ca3fb592b955230f9fe23bcc1d": "",
+      "contact_cf_c3b6ada731b6aa2ea42f73afe1141a9a89ff5be2": "",
+      "contact_cf_262b8a394c1df1aa130ecabd8230c0733f4958ec": "0",
+      "contact_cf_ed56a5bcf85fc1b88d01ebb746d3a1f96640953e": "",
+      "contact_cf_7c231d725c0d5cb4b2159cea6266128406139b42": "",
+      "contact_cf_46b91c78ba6a3f9762f0fe1f2dc74238df90c289": "",
+      "contact_cf_4080db556b5a90be9348711cf7a008001801b1f0": "",
+      "contact_cf_42db67815b80356236935b0078219d2fcc5f348f": "0",
+      "contact_cf_0947666cbb4f7f4c68b45980111dad17b3f01133": "",
+      "contact_cf_ae959de70df5eb32679cf3ec56785f675d0c903c": "0",
+      "contact_cf_31d23bd4be85682219f28cdca3277a7265812d07": "",
+      "contact_cf_081eb0276d10c1a19eb0c0f75c1eee113d560a13": "",
+      "contact_cf_c5382088dc764cbc864c17d7ea93aa3ec03c8542": "",
+      "contact_cf_752480a4a162adb19bf878c194511f508cdf6bb1": "",
+      "contact_cf_06a21bd848cd3fff1fac7b126092c357dbcd708c": "",
+      "contact_cf_b803c51a4ee69f075f21f0fee2315d8229b6d94c": "",
+      "contact_cf_70b1739ae530576ea874cd120fe02de21620a1a3": "",
+      "contact_cf_f04411c222d2940c9701175d53f76ac67dd45fe5": "",
+      "contact_cf_62876f015bd25fbdbc65ebf428d948f85512a2db": "",
+      "contact_cf_9479d1fb5fd784da68ef849c9f6924002ce4b65a": "",
+      "contact_cf_642d5cf24aa07b20556839c602c42143c80904bb": "0",
+      "contact_cf_8ef853915d0f93d9eeecce8c916c1019d59a7d46": "not-married",
+      "contact_cf_4c6eb27c5bdcd561f145ac1d88f4cc42b5eaf802": "0",
+      "contact_cf_697d2f43d0cc2ee4fbf6d1272b4512d83d9a78cf": "married",
+      "contact_cf_03ed8d6d1d8dac626712180ddf276442c79a781f": "",
+      "id": 1
+    }
+  ]
 }
