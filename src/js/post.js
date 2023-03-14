@@ -1,5 +1,5 @@
-// const BASE_URL = 'http://localhost:3000/clients';
-const BASE_URL = 'https://hook.leadbox.com.ua/cc904e4803958b3781994bdc105eeeca ';
+const BASE_URL = 'http://localhost:3000/clients';
+// const BASE_URL = 'https://hook.leadbox.com.ua/cc904e4803958b3781994bdc105eeeca ';
 const clientInfo = {};
 
 let form = document.querySelector('form');
