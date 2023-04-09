@@ -198,10 +198,16 @@ button {
     border-radius: 10px;
     font-size: 14px;
     transition: .4s;
-    width: 100%;
+}
+
+.textarea-control:focus-visible{
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
 }
 
 .second-text {
     font-size: 12px;
     text-align: center;
 }
+
