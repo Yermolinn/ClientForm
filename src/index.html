@@ -7,14 +7,14 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="cfikGKetdZQme7wqLOXuoG1qHE-ci3hZDgz0wzVjP58">
-    <meta property="og:title" content="UAMF - Анкета">
+    <meta property="og:title" content="UAMF - Заявка">
     <meta property="og:description" content="Заявка на отримання послуг">
     <meta property="og:url" content="https://uamf.com.ua">
     <meta property="og:images" content="/images/logo.png">
     <meta property="og:images:secure_url" content="/images/logo.png">
     <meta property="og:images:alt" content="UAMF">
     <meta property="og:images:type" content="images/png">
-    <title>UAMF - Анкета</title>
+    <title>UAMF - Заявка</title>
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -38,10 +38,11 @@
 
 
                 <div class="mb-3">
-                    <label for="contactType" class="form-label">Вибрати тип послуги <span class="importent">*</span></label>
+                    <label for="contactType" class="form-label">Вибрати тип послуги <span
+                            class="importent">*</span></label>
                     <select class="form-control" id="contactType" name="contactType" required="">
-                        <option value="employer">Працевлаштування</option>
-                        <option value="taxRefund">Повернення податків</option>
+                        <option value="Працевлаштування">Працевлаштування</option>
+                        <option value="Повернення податків">Повернення податків</option>
                     </select>
                 </div>
 
@@ -50,31 +51,17 @@
                 <h3 class="titles">💳 Особиста інформація</h3>
                 <div class="section">
                     <div class="mb-3">
-                        <label for="name" class="form-label">Прізвище, ім'я, по-батькові *</label>
+                        <label for="name" class="form-label">Прізвище, ім'я, по-батькові <span
+                                class="importent">*</span></label>
                         <input type="text" class="form-control" id="name" name="name" required="">
                         <div class="invalid-feedback">
                             Поле не може бути пустим
                         </div>
                     </div>
 
-                    <!-- <div class="mb-3">
-                            <label for="name" class="form-label">Ім'я *</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Ім'я" required="">
-                            <div class="invalid-feedback">
-                                Поле не може бути пустим
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="fatherName" class="form-label">По-батькові *</label>
-                            <input type="text" class="form-control" id="fatherName" name="fatherName" placeholder="По-батькові" required="">
-                            <div class="invalid-feedback">
-                                Поле не може бути пустим
-                            </div>
-                        </div> -->
-
                     <div class="mb-3">
-                        <label for="birthday" class="form-label">Дата народження *</label>
+                        <label for="birthday" class="form-label">Дата народження <span
+                                class="importent">*</span></label>
                         <input type="date" class="form-control" id="birthday"
                             name="contact_cf_928bc2731cc537869995ff7b92a28c154d3facb7" required="">
                         <div class="invalid-feedback">
@@ -83,9 +70,9 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="phone" class="form-label">Номер телефону *</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" minlength="9" maxlength="13"
-                            required="">
+                        <label for="phone" class="form-label">Номер телефону <span class="importent">*</span></label>
+                        <input type="tel" class="form-control" id="phone" name="phone" value="380" minlength="9"
+                            maxlength="13" required="">
                         <div class="invalid-feedback">
                             Вкажіть контактний номер телефону
                         </div>
@@ -93,16 +80,12 @@
 
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
-                        <input type="email" class="form-control _mailVal" id="email" name="email" value="" minlength="7">
+                        <input type="email" class="form-control" id="email" name="email" value="" minlength="7">
                     </div>
 
-                    <!--<div class="mb-3">-->
-                    <!--    <label for="passport" class="form-label">Паспортні дані *</label>-->
-                    <!--    <input type="text" class="form-control" id="passport" name="passport" placeholder="серія, номер, ким виданий">-->
-                    <!--</div>-->
-
                     <div class="mb-3">
-                        <label for="currentCountry" class="form-label">Країна перебування *</label>
+                        <label for="currentCountry" class="form-label">Країна перебування <span
+                                class="importent">*</span></label>
                         <input type="text" class="form-control" id="currentCountry"
                             name="contact_cf_c3b6ada731b6aa2ea42f73afe1141a9a89ff5be2" required="">
                         <div class="invalid-feedback">
@@ -111,92 +94,43 @@
                     </div>
 
 
-                    <!--<div class="mb-3">-->
-                    <!--    <label for="biometricPassport" class="form-label">Наявність біометричного паспорта *</label>-->
-                    <!--    <select class="form-control" id="biometricPassport" name="contact_cf_8ef853915d0f93d9eeecce8c916c1019d59a7d46" required="">-->
-                    <!--        <option value="not-married">Не маю</option>-->
-                    <!--        <option value="married">Маю</option>-->
-                    <!--    </select>-->
-                    <!--    <div class="invalid-feedback">-->
-                    <!--        Поле не може бути пустим-->
-                    <!--    </div>-->
-                    <!--</div>-->
-
-
-
-
                     <div class="mb-3 js-shelter">
-                        <label for="" class="form-label">Наявність прихистку за кордоном *</label>
+                        <label for="" class="form-label">Наявність прихистку за кордоном <span
+                                class="importent">*</span></label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
-                                name="contact_cf_4c6eb27c5bdcd561f145ac1d88f4cc42b5eaf802" id="no-shelter" value="no"
-                                checked="">
+                                name="contact_cf_4c6eb27c5bdcd561f145ac1d88f4cc42b5eaf802" id="no-shelter"
+                                value="Не маю" checked="">
                             <label class="form-check-label" for="no-shelter">
                                 Не маю
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
-                                name="contact_cf_4c6eb27c5bdcd561f145ac1d88f4cc42b5eaf802" value="yes" id="shelter">
+                                name="contact_cf_4c6eb27c5bdcd561f145ac1d88f4cc42b5eaf802" value="Маю" id="shelter">
                             <label class="form-check-label" for="shelter">
                                 Маю
                             </label>
                         </div>
                         <div class="mb-3 country-shelter" style="display: none;">
-                            <label for="countryShelter" class="form-label">В якій країні *</label>
+                            <label for="countryShelter" class="form-label">В якій країні <span
+                                    class="importent">*</span></label>
                             <input type="text" class="form-control" id="countryShelter" name="countryShelter">
                             <div class="invalid-feedback">
                                 Поле не може бути пустим
                             </div>
                         </div>
-                        <!--<div class="mb-3">-->
-                        <!--    <label for="currentLocation" class="form-label">Адреса поточного місцезнаходження *</label>-->
-                        <!--    <input type="text" class="form-control" id="currentLocation" name="contact_cf_9336cc571ed8dc9ca3fb592b955230f9fe23bcc1d" required="">-->
-                        <!--    <div class="invalid-feedback">-->
-                        <!--        Поле не може бути пустим-->
-                        <!--    </div>-->
-                        <!--</div>-->
                     </div>
-
-
-
-                    <!--<h3 class="titles">📌 Інформація щодо перетину кордонів</h3>-->
-                    <div class="section">
-
-
-                    </div>
-
-                    <!--<div class="mb-3">-->
-                    <!--    <label for="crossBorder" class="form-label">Чи маєте право перетину кордону згідно чинного законодавства *</label>-->
-                    <!--    <select class="form-control" id="crossBorder" name="contact_cf_697d2f43d0cc2ee4fbf6d1272b4512d83d9a78cf" required="">-->
-                    <!--        <option value="1">Маю</option>-->
-                    <!--        <option value="0">Не маю</option>-->
-                    <!--    </select>-->
-                    <!--    <div class="invalid-feedback">-->
-                    <!--        Поле не може бути пустим-->
-                    <!--    </div>-->
-                    <!--</div>-->
-
-
-                    <!--<div class="mb-3">-->
-                    <!--    <label for="crossBorderDoc" class="form-label">Документ, що підтверджує право перетину кордону *</label>-->
-                    <!--    <input type="text" class="form-control" id="crossBorderDoc" name="contact_cf_03ed8d6d1d8dac626712180ddf276442c79a781f"  required="">-->
-                    <!--    <div class="invalid-feedback">-->
-                    <!--        Поле не може бути пустим-->
-                    <!--    </div>-->
-                    <!--</div>-->
                 </div>
-
-
 
 
                 <h3 class="titles">🎓 Освіта</h3>
                 <div class="section">
                     <div class="mb-3 js-student">
-                        <label class="form-label">Студент *</label>
+                        <label class="form-label">Студент <span class="importent">*</span></label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
-                                name="contact_cf_262b8a394c1df1aa130ecabd8230c0733f4958ec" id="no-student" value="no"
+                                name="contact_cf_262b8a394c1df1aa130ecabd8230c0733f4958ec" id="no-student" value="Ні"
                                 checked="" required="">
                             <label class="form-check-label" for="no-student">
                                 Ні
@@ -204,7 +138,7 @@
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
-                                name="contact_cf_262b8a394c1df1aa130ecabd8230c0733f4958ec" value="yes" id="student"
+                                name="contact_cf_262b8a394c1df1aa130ecabd8230c0733f4958ec" value="Так" id="student"
                                 required="">
                             <label class="form-check-label" for="student">
                                 Так
@@ -274,28 +208,28 @@
                 <h3 class="titles">🗣 Знання мов</h3>
                 <div class="section">
                     <div class="mb-3 js-english-language">
-                        <label class="form-label">Англійська *</label>
+                        <label class="form-label">Англійська <span class="importent">*</span></label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
-                                name="contact_cf_42db67815b80356236935b0078219d2fcc5f348f" id="no-english" value="no"
-                                checked="" required="">
+                                name="contact_cf_42db67815b80356236935b0078219d2fcc5f348f" id="no-english"
+                                value="Не володію" checked="" required="">
                             <label class="form-check-label" for="no-english">
                                 Не володію
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio"
-                                name="contact_cf_42db67815b80356236935b0078219d2fcc5f348f" id="english" value="speak"
+                                name="contact_cf_42db67815b80356236935b0078219d2fcc5f348f" id="english" value="Володію"
                                 required="">
                             <label class="form-check-label" for="english">
                                 Володію
                             </label>
                         </div>
                         <div class="mb-3 english-level" style="display: none;">
-                            <select class="form-control" id="crossBorder" name="engLevel">
-                                <option value="elementary">Базова</option>
-                                <option value="good">Розмовна</option>
-                                <option value="native">Вільно</option>
+                            <select class="form-control" id="engLevel" name="engLevel">
+                                <option value="Базова">Базова</option>
+                                <option value="Розмовна">Розмовна</option>
+                                <option value="Вільно">Вільно</option>
                             </select>
                             <div class="invalid-feedback">
                                 Поле не може бути пустим
@@ -316,10 +250,10 @@
 
 
                 <div class="mb-3 js-drive-licence">
-                    <label class="form-label">Посвідчення водія *</label>
+                    <label class="form-label">Посвідчення водія <span class="importent">*</span></label>
                     <div class="form-check">
                         <input class="form-check-input" type="radio"
-                            name="contact_cf_ae959de70df5eb32679cf3ec56785f675d0c903c" id="no-drive" value="no"
+                            name="contact_cf_ae959de70df5eb32679cf3ec56785f675d0c903c" id="no-drive" value="Ні"
                             checked="" required="">
                         <label class="form-check-label" for="no-drive">
                             Ні
@@ -327,22 +261,24 @@
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio"
-                            name="contact_cf_ae959de70df5eb32679cf3ec56785f675d0c903c" id="drive" value="yes" required="">
+                            name="contact_cf_ae959de70df5eb32679cf3ec56785f675d0c903c" id="drive" value="Так"
+                            required="">
                         <label class="form-check-label" for="drive">
                             Так
                         </label>
                     </div>
                     <div class="mb-3 drive-category" style="display: none;">
-                        <label for="categories" class="form-label">Категорії: <span class="importent">*</span></label>
-                        <label>A <input type="checkbox" class="driveCat" id="categoryA" name="categoryA" value="Категорія А"></label>
-                        <label>B <input type="checkbox" class="driveCat" id="categoryB" name="categoryB" value="Категорія В"></label>
-                        <label>C <input type="checkbox" class="driveCat" id="categoryC" name="categoryC" value="Категорія С"></label>
-                        <label>D <input type="checkbox" class="driveCat" id="categoryD" name="categoryD" value="Категорія D"></label>
-                        <label>E <input type="checkbox" class="driveCat" id="categoryE" name="categoryE" value="Категорія E"></label>
-                        <label>Трактор <input type="checkbox" class="driveCat" id="tracktor" name="tracktor" value="Трактор"></label>
+                        <label class="form-label">Категорії: <span class="importent">*</span></label>
+                        <label>A <input type="checkbox" class="driveCat" id="categoryA" value="Категорія А"></label>
+                        <label>B <input type="checkbox" class="driveCat" id="categoryB" value="Категорія В"></label>
+                        <label>C <input type="checkbox" class="driveCat" id="categoryC" value="Категорія С"></label>
+                        <label>D <input type="checkbox" class="driveCat" id="categoryD" value="Категорія D"></label>
+                        <label>E <input type="checkbox" class="driveCat" id="categoryE" value="Категорія E"></label>
+                        <label>Трактор <input type="checkbox" class="driveCat" id="tracktor" value="Трактор"></label>
                         <div class="invalid-feedback">
                             Поле не може бути пустим
                         </div>
+
                         <div class="mb-3">
                             <label for="driveExp" class="form-label">Досвід керування</label>
                             <input type="text" class="form-control" id="driveExp"
@@ -370,152 +306,68 @@
                 </div>
 
 
-
-                <!--<h3 class="titles">🏋️ Додаткова інформація</h3>-->
-                <!--<div class="mb-3">-->
-                <!--    <label for="height" class="form-label">Зріст, см</label>-->
-                <!--    <input type="number" class="form-control" id="height" name="contact_cf_752480a4a162adb19bf878c194511f508cdf6bb1" placeholder="180 см"  min="100"-->
-                <!--        max="220">-->
-                <!--</div>-->
-
-
-                <!--<div class="mb-3">-->
-                <!--    <label for="weight" class="form-label">Вага, кг</label>-->
-                <!--    <input type="number" class="form-control" id="weight" name="contact_cf_06a21bd848cd3fff1fac7b126092c357dbcd708c" placeholder="72 кг"  min="35"-->
-                <!--        max="150">-->
-                <!--</div>-->
-
-
-
-                <!--<div class="mb-3">-->
-                <!--    <label for="shoeSize" class="form-label">Розмір взуття</label>-->
-                <!--    <input type="number" class="form-control" id="shoeSize" name="contact_cf_b803c51a4ee69f075f21f0fee2315d8229b6d94c" placeholder="41"  min="33"-->
-                <!--        max="50">-->
-                <!--</div>-->
-
-
-
-                <!--<h3 class="titles">💼 Досвід роботи за кордоном</h3>-->
-                <!--<div>-->
-
-                <!--    <div class="mb-3">-->
-                <!--        <label for="employer" class="form-label">Назва організації / Контактна особа</label>-->
-                <!--        <input type="text" class="form-control" id="employer" name="contact_cf_70b1739ae530576ea874cd120fe02de21620a1a3" >-->
-                <!--    </div>-->
-
-                <!--    <div class="mb-3">-->
-                <!--        <label for="employerPhone" class="form-label">Телефон</label>-->
-                <!--        <input type="tel" class="form-control" id="employerPhone" name="contact_cf_f04411c222d2940c9701175d53f76ac67dd45fe5" value="+380" minlength="9" maxlength="15">-->
-                <!--    </div>-->
-
-                <!--    <div class="mb-3">-->
-                <!--        <label for="employerContry" class="form-label">Країна / Адреса</label>-->
-                <!--        <input type="text" class="form-control" id="employerContry" name="contact_cf_62876f015bd25fbdbc65ebf428d948f85512a2db" >-->
-                <!--    </div>-->
-
-                <!--    <div class="mb-3">-->
-                <!--        <label for="startPrewWork" class="form-label">Початок роботи</label>-->
-                <!--        <input type="date" class="form-control" id="startPrewWork" name="startPrewWork" >-->
-                <!--    </div>-->
-                <!--    <div class="mb-3">-->
-                <!--        <label for="finishPrewWork" class="form-label">Кінець роботи</label>-->
-                <!--        <input type="date" class="form-control" id="finishPrewWork" name="finishPrewWork" >-->
-                <!--    </div>-->
-
-                <!--    <div class="mb-3">-->
-                <!--        <label for="jobType" class="form-label">Тип роботи</label>-->
-                <!--        <input type="text" class="form-control" id="jobType" name="contact_cf_9479d1fb5fd784da68ef849c9f6924002ce4b65a" placeholder="пряні трави, збір ягід, вирощування квітів" >-->
-                <!--    </div>-->
-
-                <!--    <label class="form-label">Паперові рекомендації</label>-->
-                <!--    <div class="form-check">-->
-                <!--        <input class="form-check-input" type="radio" name="contact_cf_642d5cf24aa07b20556839c602c42143c80904bb" id="no-recomendation" value="0" checked="" >-->
-                <!--        <label class="form-check-label" for="no-recomendation">-->
-                <!--            Не маю-->
-                <!--        </label>-->
-                <!--    </div>-->
-                <!--    <div class="form-check">-->
-                <!--        <input class="form-check-input" type="radio" name="recomendation" value="1" id="recomendation" >-->
-                <!--        <label class="form-check-label" for="recomendation">-->
-                <!--            Маю-->
-                <!--        </label>-->
-                <!--    </div>-->
-                <!--</div>-->
-
-
-
-
-
-
-
                 <h3 class="titles">✈️ Побажання щодо роботи</h3>
-                <div>
-                    <!--<div class="mb-3">-->
-                    <!--    <label for="startWork" class="form-label">Початок роботи якнайшвидше з</label>-->
-                    <!--    <input type="date" class="form-control" id="startWork" name="deal_cf_b322a776f61257a19915118c7269533e637d0e26"-->
-                    <!--         >-->
-                    <!--</div>-->
+                <div class="mb-3">
+                    <label for="term" class="form-label">Бажана дата та термін роботи</label>
+                    <input type="text" class="form-control" id="term"
+                        name="deal_cf_aee886908bc4a731e6bbcd60ae56ded02f8fc584">
+                </div>
 
+                <div class="mb-3 js-together">
+                    <label class="form-label">Плануєте їхати самостійно</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            name="deal_cf_f0a4df0e430ed3fba8cb83a641e9d9ca6c27c4c7" id="alone" value="Самостійно"
+                            checked>
+                        <label class="form-check-label" for="alone">
+                            Самостійно
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio"
+                            name="deal_cf_f0a4df0e430ed3fba8cb83a641e9d9ca6c27c4c7" value="Разом" id="together">
+                        <label class="form-check-label" for="together">
+                            Разом
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3 info-together" style="display: none;">
+                    <label for="secPerson" class="form-label">Вкажіть ПІБ з ким плануєте їхати</label>
+                    <textarea class="textarea-control" id="secPerson" rows="3"
+                        name="deal_cf_35c2cb99905d80bc2b762c6d1c94af914cab28ce"
+                        placeholder="Іваненко Іван Іванович, Іваненко Анастасія Михайлівна"></textarea>
                     <div class="mb-3">
-                        <label for="term" class="form-label">Бажана дата та термін роботи</label>
-                        <input type="text" class="form-control" id="term"
-                            name="deal_cf_aee886908bc4a731e6bbcd60ae56ded02f8fc584">
+                        <label for="secPersonPhone" class="form-label">Контактні данні особи, з ким плануєте
+                            їхати</label>
+                        <input type="text" class="form-control" id="secPersonPhone"
+                            name="deal_cf_ea976f14a52c0b3887275e31d26f20d43aa60e6a"
+                            placeholder="е-mail, номер телефону">
                     </div>
-
-                    <div class="mb-3 js-together">
-                        <label class="form-label">Плануєте їхати самостійно</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio"
-                                name="deal_cf_f0a4df0e430ed3fba8cb83a641e9d9ca6c27c4c7" id="alone" value="alone" checked>
-                            <label class="form-check-label" for="alone">
-                                Самостійно
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio"
-                                name="deal_cf_f0a4df0e430ed3fba8cb83a641e9d9ca6c27c4c7" value="together" id="together">
-                            <label class="form-check-label" for="together">
-                                Разом
-                            </label>
-                        </div>
-                    </div>
-                    <div class="mb-3 info-together" style="display: none;">
-                        <label for="secPerson" class="form-label">Вкажіть ПІБ з ким плануєте їхати</label>
-                        <textarea class="textarea-control" id="secPerson" rows="3"
-                            name="deal_cf_35c2cb99905d80bc2b762c6d1c94af914cab28ce"
-                            placeholder="Іваненко Іван Іванович, Іваненко Анастасія Михайлівна"></textarea>
-                        <div class="mb-3">
-                            <label for="secPersonPhone" class="form-label">Контактні данні особи, з ким плануєте
-                                їхати</label>
-                            <input type="text" class="form-control" id="secPersonPhone"
-                                name="deal_cf_ea976f14a52c0b3887275e31d26f20d43aa60e6a"
-                                placeholder="е-mail, номер телефону">
-                        </div>
-                    </div>
+                </div>
 
 
-                    <h3 class="titles">✒️ Коментар</h3>
-                    <div class="mb-3">
-                        <label for="comment" class="form-label"></label>
-                        <textarea class="textarea-control" id="comment" rows="8"
-                            name="deal_cf_52776727e9acc4774092471866457a39cea58481"></textarea>
-                    </div>
+                <h3 class="titles">✒️ Коментар</h3>
+                <div class="mb-3">
+                    <label for="comment" class="form-label"></label>
+                    <textarea class="textarea-control" id="comment" rows="8"
+                        name="deal_cf_52776727e9acc4774092471866457a39cea58481"></textarea>
+                </div>
 
 
 
-                    <div class="justify-content-center" style="display: none;" id="sendingForm">
-                        <div class="spinner-border text-primary" role="status">
-                            <span class="visually-hidden">Відправлення...</span>
-                        </div>
+                <div class="justify-content-center" style="display: none;" id="sendingForm">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Відправлення...</span>
                     </div>
-                    <div class="alert alert-danger" role="alert" id="noSendForm" style="display: none;">
-                        Щось пішло не так. Анкету не відправлено. Ви можете спробувати заповнити її знову, але в іншому
-                        браузері. Або напишіть нам на електрону адресу:
-                        <a href="mailto:help@uamf.com.ua"><strong>help@uamf.com.ua</strong></a>
-                    </div>
-                    <div class="col-12 mt-4">
-                        <button class="btn btn-primary w-100" type="submit">Відправити</button>
-                    </div>
+                </div>
+                <div class="alert alert-danger" role="alert" id="noSendForm" style="display: none;">
+                    Щось пішло не так, анкету не відправлено. Перевірте чи всі обов'язкові поля заповнені. Або напишіть
+                    нам на електрону адресу:
+                    <a href="mailto:help@uamf.com.ua"><strong>help@uamf.com.ua</strong></a>
+                </div>
+                <div class="col-12 mt-4">
+                    <button class="btn btn-primary w-100" type="submit">Відправити</button>
+                </div>
             </form>
         </div>
 
@@ -525,12 +377,11 @@
 
 
         <!-- Modal -->
-        <div class="" id="modalSuccess" tabindex="" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalSuccess" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel">Дякуємо, ваша анкета відправлена</h5>
-                        
+                        <h5 class="modal-title" id="modalLabel">Дякуємо, ваша заявка відправлена</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body d-flex align-items-center pt-5 pb-5">
